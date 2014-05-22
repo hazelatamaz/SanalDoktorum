@@ -1,0 +1,149 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Sanal Doktorum</title>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="menu-wrapper">
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="Default.aspx">Anasayfa</a></li>
+			<li><a href="Default6.aspx">Ýletiþim</a></li>
+            <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+		</ul>
+	</div>
+	<!-- end #menu --> 
+</div>
+<div id="header-wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#" style="font-family: 'Comic Sans MS'">sanal doktorum</a></h1>
+		</div>
+	</div>
+</div>
+<div id="wrapper"> 
+	<!-- end #header -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>Kategoriler</h2>
+							<ul>
+								<li><a href="Default2.aspx" style="font-family: 'Comic Sans MS'">Sanal Doktorum</a></li>
+								<li><a href="Default3.aspx" style="font-family: 'Comic Sans MS'">Hastalýk ve Uzmanlýk Alanlarý</a></li>
+								<li><a href="Default4.aspx" style="font-family: 'comic Sans MS'">Hastalýklar</a></li>
+							</ul>
+						</li>
+					</ul>
+                    &nbsp;<br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <asp:Label ID="Label3" runat="server" Font-Names="Comic Sans MS" 
+                        Font-Size="Medium" ForeColor="Black"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label1" runat="server" Text="Admin  " ForeColor="Black"></asp:Label>
+                    <asp:TextBox ID="TextBox1" runat="server" style="margin-left: 11px"></asp:TextBox>&nbsp;&nbsp;
+                    <br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                        ControlToValidate="TextBox1" ErrorMessage="Lütfen kullanýcý adýný giriniz !"></asp:RequiredFieldValidator>
+                    <br />
+                    <br />
+                    <asp:Label ID="Label2" runat="server" Text="Þifre  " ForeColor="Black"></asp:Label>
+                    <asp:TextBox ID="TextBox2" runat="server" style="margin-left: 22px" 
+                        TextMode="Password"></asp:TextBox>
+                    <br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                        ControlToValidate="TextBox2" ErrorMessage="Lütfen þifrenizi giriniz!"></asp:RequiredFieldValidator>
+                    <br />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="giris_btn" runat="server" Text="Giriþ" BackColor="#474747" 
+                        BorderStyle="None" Font-Names="Comic Sans MS" ForeColor="White" 
+                        onclick="giris_btn_Click" Width="70px" />
+                    &nbsp;&nbsp;
+                    <asp:Button ID="cýkýs_btn" runat="server" Text="Çýkýþ" BackColor="#474747" 
+                        BorderStyle="None" Font-Names="Comic Sans MS" ForeColor="White" 
+                        onclick="cýkýs_btn_Click" Width="70px" />
+                    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br />
+                    <br />
+                    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</div>
+				<!-- end #sidebar -->
+				<div id="content">
+                <div class="post">
+					<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder6" runat="server">
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder7" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </asp:ContentPlaceHolder>
+                                    </asp:ContentPlaceHolder>
+                                </asp:ContentPlaceHolder>
+                            </asp:ContentPlaceHolder>
+                        </asp:ContentPlaceHolder>
+        
+                    </asp:ContentPlaceHolder>
+                    </div>
+				</div>
+
+				<!-- end #content -->
+                <div id="sidebar2" style="background-color: #FFFFFF">
+					<ul>
+						<li>
+							<h2>&nbsp; Saðlýkla Ýlgili Haberler</h2>
+							<ul>
+								
+                                <marquee align="middle" scrollamount="1" height="100" width="100%" 
+                                    direction="up"scrolldelay="1" style="margin-left: 11px">
+                                <a href="http://saglik.milliyet.com.tr/amniyosentez-de-yeni-yontem-/tiptakigelismeler/haberdetay/05.04.2013/1689811/default.htm" 
+                                style="font-family: 'Comic Sans MS'">Amniyosentez'de yeni yöntem!</a><br />
+                                <a href="http://saglik.milliyet.com.tr/alerjik-nezleye-teknoloji-care-buldu-/tiptakigelismeler/haberdetay/12.04.2012/1527437/default.htm" 
+                                style="font-family: 'Comic Sans MS'">Alerjik nezleye teknoloji çare buldu!</a><br />
+                                <a href="http://saglik.milliyet.com.tr/korluge-karsi-yeni-umut/tiptakigelismeler/haberdetay/26.07.2012/1572267/default.htm" 
+                                style="font-family: 'Comic Sans MS'">Körlüðe karþý yeni umut!</a>
+                                </marquee>
+							</ul>
+						</li>
+						
+					</ul>
+				</div>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+		</div>
+
+	</div>
+	<!-- end #page --> 
+<div id="footer">
+	<p>Telif Haklarý Saklýdýr</p>
+</div>
+<!-- end #footer -->
+    </form>
+</body>
+</html>
+
